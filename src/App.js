@@ -12,9 +12,7 @@ class App extends Component {
   };
 
   componentWillMount() {
-    const request = fetch(`https://api.openweathermap.org/data/2.5/forecast?q=London,uk&units=metric&appid=${API_KEY}`, {
-      method: 'GET'
-    });
+    const request = fetch(`http://api.openweathermap.org/data/2.5/forecast?q=London,uk&units=metric&appid=${API_KEY}`);
     
     request
       .then(data => data.json())
