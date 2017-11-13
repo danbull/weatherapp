@@ -35,7 +35,7 @@ const WeatherWindDeg = styled.span`
   > span {
     position: absolute;
     left: 50%;
-    margin-left: --8px;
+    margin-left: -8px;
     top: -0.25rem;
     font-size: 2rem;
   }
