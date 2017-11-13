@@ -8,7 +8,7 @@ const ForecastDay = (props) => (
     <h2>{props.day}</h2>
     <ul className="forecast__times">
       {
-        props.weather.map(weatherPart => {
+        props.weather.map((weatherPart, index) => {
           const time = TimeOfDay(weatherPart.dt);
           const icon = weatherPart.weather[0].icon;
           const temp = Math.round(weatherPart.main.temp);
@@ -16,7 +16,7 @@ const ForecastDay = (props) => (
           const windDeg = Math.round(ReverseWindDeg(weatherPart.wind.deg));
 
           return (
-            <ForecastDayPart time={time} temp={temp} windSpeed={windSpeed} windDeg={windDeg} icon={icon} />
+            <ForecastDayPart key={index} time={time} temp={temp} windSpeed={windSpeed} windDeg={windDeg} icon={icon} />
           );
         })
       }

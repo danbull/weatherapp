@@ -47,7 +47,7 @@ class App extends Component {
             { this.state.weather.map((day, index) => {
                 if (day.length > 0) {
                   const dayName = DayOfWeek(day[0].dt, index) || '';
-                  if (index < 5) return <ForecastDay day={dayName} weather={day} />
+                  if (index < 5) return <ForecastDay key={dayName} day={dayName} weather={day} />
                 }
 
                 return false;
