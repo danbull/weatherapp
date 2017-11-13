@@ -1,0 +1,18 @@
+.App {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+.forecast__times {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  width: 700px;
+  padding-bottom: 1rem;
+}
+
+.forecast__day {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
